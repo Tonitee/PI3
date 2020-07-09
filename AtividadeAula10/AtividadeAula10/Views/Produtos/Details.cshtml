@@ -1,0 +1,35 @@
+﻿@model AtividadeAula10.Models.Produto
+
+@{
+    ViewData["Title"] = "Detalhes do Jogo";
+}
+
+<h2>Detalhes do Jogo</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Plataforma)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Plataforma.Nome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Cancelar</a>
+</div>

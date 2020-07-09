@@ -1,0 +1,22 @@
+﻿@model AtividadeAula10.Models.Categoria
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+
+<h2>Deseja deletar a plataforma?</h2><br />
+<div>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+    </dl>
+    <br />
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Confirmar" class="btn btn-default" /> <br /><br />
+        <a asp-action="Index">Cancelar</a>
+    </form>
+</div>

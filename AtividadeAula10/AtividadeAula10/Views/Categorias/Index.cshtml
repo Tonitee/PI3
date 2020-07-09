@@ -1,0 +1,32 @@
+﻿@model IEnumerable<AtividadeAula10.Models.Categoria>
+@{ 
+    ViewData["Title"] = "Plataformas";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create" style="position: relative; top: 5px;">Adicionar Plataforma</a>
+</p><br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Nome)</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach( var cat in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => cat.Nome)</td>
+            <td>
+                <a asp-action="Editar" asp-route-id="@cat.Id">Editar</a>
+                <a asp-action="Delete" asp-route-id="@cat.Id">Deletar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
